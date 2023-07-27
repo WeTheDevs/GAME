@@ -168,3 +168,118 @@ Callback = function()
 workspace.CurrentCamera.FieldOfView = 70
 end
 })
+
+local Tab2 = Window:MakeTab({
+	Name = "Visuals",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Sense = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Sirius/request/library/sense/source.lua'))()
+Sense.Load()
+
+Tab2:AddToggle({
+Name = "Enable",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.enabled = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Team Enabled",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.friendly.enabled = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Box",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.box = Toggle
+Sense.teamSettings.friendly.box = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Box Outline",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.boxOutline = Toggle
+Sense.teamSettings.friendly.boxOutline = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Box Fill",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.boxFill = Toggle
+Sense.teamSettings.friendly.boxFill = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Health Bar",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.healthBar = Toggle
+Sense.teamSettings.friendly.healthBar = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Health Bar Outline",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.healthBarOutline = Toggle
+Sense.teamSettings.friendly.healthBarOutline = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Health Text",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.healthText = Toggle
+Sense.teamSettings.friendly.healthText = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Health Text Outline",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.healthTextOutline = Toggle
+Sense.teamSettings.friendly.healthTextOutline = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Box 3D",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.box3d = Toggle
+Sense.teamSettings.friendly.box3d = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Name",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.name = Toggle
+Sense.teamSettings.friendly.name = Toggle
+end
+})
+
+Tab2:AddToggle({
+Name = "Name Outline",
+Default = false,
+Callback = function(Toggle)
+Sense.teamSettings.enemy.nameOutline = Toggle
+Sense.teamSettings.friendly.nameOutline = Toggle
+end
+})
